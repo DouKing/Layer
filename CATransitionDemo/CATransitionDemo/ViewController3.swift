@@ -54,7 +54,7 @@ class ViewController3: UIViewController {
       UIColor.green.cgColor,
       UIColor.blue.cgColor
     ]
-    let fn = CAMediaTimingFunction(name: kCAMediaTimingFunctionEaseInEaseOut)
+	let fn = CAMediaTimingFunction(name: CAMediaTimingFunctionName.easeInEaseOut)
     keyframeAnimation.timingFunctions = [fn, fn, fn, fn]
     colorLayer.add(keyframeAnimation, forKey: nil)
   }

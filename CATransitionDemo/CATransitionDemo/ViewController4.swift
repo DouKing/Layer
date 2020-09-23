@@ -35,7 +35,7 @@ class ViewController4: UIViewController {
 
   private func drawTimingPath(name: String) {
     print(name)
-    let function = CAMediaTimingFunction(name: name)
+	let function = CAMediaTimingFunction(name: CAMediaTimingFunctionName(rawValue: name))
     drawTimingFunctionPath(function)
   }
 

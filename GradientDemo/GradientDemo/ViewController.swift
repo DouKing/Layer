@@ -45,7 +45,7 @@ class ViewController: UIViewController {
         let colorChangeAnimation = CABasicAnimation(keyPath: "colors")
         colorChangeAnimation.duration = 0.5
         colorChangeAnimation.toValue = colorSets[currentIndex]
-        colorChangeAnimation.fillMode = kCAFillModeForwards
+        colorChangeAnimation.fillMode = CAMediaTimingFillMode.forwards
         colorChangeAnimation.isRemovedOnCompletion = false
         colorChangeAnimation.delegate = self
         gradientLayer.add(colorChangeAnimation, forKey: "colorChange")

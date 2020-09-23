@@ -20,8 +20,8 @@ class ViewController2: UIViewController {
     colorLayer?.backgroundColor = #colorLiteral(red: 0, green: 0.4784313725, blue: 1, alpha: 1).cgColor
 
     let transition = CATransition()
-    transition.type = kCATransitionPush
-    transition.subtype = kCATransitionFromLeft
+	transition.type = CATransitionType.push
+	transition.subtype = CATransitionSubtype.fromLeft
     colorLayer?.actions = ["backgroundColor" : transition]
 
     layerView.layer.addSublayer(colorLayer!)
