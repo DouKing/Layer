@@ -13,6 +13,6 @@ extension UIColor {
     let r = arc4random() % 256
     let g = arc4random() % 256
     let b = arc4random() % 256
-    return UIColor(colorLiteralRed: Float(r) / 255.0, green: Float(g) / 255.0, blue: Float(b) / 255.0, alpha: 1)
+	return UIColor(_colorLiteralRed: Float(r) / 255.0, green: Float(g) / 255.0, blue: Float(b) / 255.0, alpha: 1)
   }
 }

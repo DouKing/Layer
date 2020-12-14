@@ -25,7 +25,7 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         creatGradientLayer()
-        
+
         let singleTapGesture = UITapGestureRecognizer(target: self, action: #selector(handleSingleTapAction))
         self.view.addGestureRecognizer(singleTapGesture)
     }

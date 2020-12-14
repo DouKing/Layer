@@ -18,16 +18,16 @@ class ViewController: UIViewController {
   
   @IBAction func handleClickAction(_ sender: UIButton) {
     print(sender.title(for: .normal)!)
-    transition(with: sender.title(for: .normal)!, subType: kCATransitionFromLeft)
+	transition(with: sender.title(for: .normal)!, subType: CATransitionSubtype.fromLeft.rawValue)
     changeBackgroundColor()
   }
   
   private func transition(with type: String, subType: String) {
     let animation = CATransition()
     animation.duration = 0.5
-    animation.type = type
-    animation.subtype = subType
-    animation.timingFunction = CAMediaTimingFunction(name: kCAMediaTimingFunctionEaseInEaseOut)
+	animation.type = CATransitionType(rawValue: type)
+	animation.subtype = CATransitionSubtype(rawValue: subType)
+	animation.timingFunction = CAMediaTimingFunction(name: CAMediaTimingFunctionName.easeInEaseOut)
     view.layer.add(animation, forKey: nil)
   }
 
